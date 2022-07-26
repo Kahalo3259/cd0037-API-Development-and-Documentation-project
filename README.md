@@ -6,7 +6,7 @@ Welcome to my Trivia API application! This repo was forked from the original rep
 
 ### Endpoints & Responses
 
-`/categories` - GET
+`GET /categories`
 
 - Retrieve ALL categories as a json dictionary.
 
@@ -25,7 +25,7 @@ Welcome to my Trivia API application! This repo was forked from the original rep
 
 ---
 
-`/questions?page=<int:page_number>` - GET
+`GET /questions?page=<int:page_number>`
 
 - Retrieve ALL questions as a json dictionary, in addition to the total number of questions, the current selected category, and ALL categories in a similar format to `/categories` GET request. Results will display in pages of 10 by default.
 - Parameters - Page number as an integer
@@ -64,7 +64,7 @@ Welcome to my Trivia API application! This repo was forked from the original rep
 
 ---
 
-`/questions/<int:id>` - DELETE
+`DELETE /questions/<int:id>`
 
 - Delete a question with the specified ID. Returns the ID of the deleted question and the new total number of questions.
 - Parameters - Question ID
@@ -78,7 +78,7 @@ Welcome to my Trivia API application! This repo was forked from the original rep
 
 ---
 
-`/questions` - POST
+`POST /questions`
 
 - Add a new question by sending the question, answer, difficulty & category. Returns the new question & the new total number of answers. If either the question or answer are empty, it will return 400.
 
@@ -102,7 +102,7 @@ Welcome to my Trivia API application! This repo was forked from the original rep
 
 ---
 
-`/questions` - POST
+`POST /questions`
 
 - Search for a question by sending a search term. Returns the questions matching the search term, total results & the total number of questions overall.
 
@@ -139,7 +139,7 @@ Welcome to my Trivia API application! This repo was forked from the original rep
 
 ---
 
-`/categories/<int:id>/questions` - GET
+`GET /categories/<int:id>/questions`
 
 - Retrieve all questions in the specified category using the category ID as the variable. Also includes the category being queried, the total number of results & the total questions overall.
 
@@ -183,7 +183,7 @@ Welcome to my Trivia API application! This repo was forked from the original rep
 
 ---
 
-`/quizzes` - POST
+`POST /quizzes`
 
 - Retrieves a question base on the category & previous questions. If the category sent is 0, the API will choose a category at random. If the quiz is not random and the category has exhausted all questions before the turns for the quiz are complete, it will return 422.
 
