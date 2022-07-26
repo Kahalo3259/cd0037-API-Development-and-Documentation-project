@@ -4,7 +4,34 @@
 
 Welcome to my Trivia API application! This repo was forked from the original repo to complete the Udacity "API Development and Documentation" course. Below you will see what calls you can access and what to expect in the response.
 
+## Getting Started
+
+To get started using the Trivia API, you must first install the dependencies. To do this, you can run the following command while in your virtual environment for Python. Make sure you are using Python 3.7+:
+
+```bash
+pip install -r requirements.txt
+```
+
+Once completed, you can setup the database. The following example is done using Postgres:
+```bash
+createdb trivia
+```
+
+Then insert the included .psql script into the database:
+```bash
+psql trivia < trivia.psql
+```
+
+Finally, to run the flask server, run:
+```bash
+flask run
+```
+
+Now you can run queries to the host:port that flask is running on to interact with the Trivia API!
+
 ### Endpoints & Responses
+
+Here are the endpoints that you are able to run queries on and what the expected responses should be:
 
 `GET /categories`
 
